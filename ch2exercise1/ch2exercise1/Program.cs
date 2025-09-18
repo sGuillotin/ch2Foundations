@@ -1,4 +1,5 @@
-﻿
+﻿using System.Formats.Asn1;
+
 OperatorExamples();
 
 void OperatorExamples()
@@ -16,8 +17,24 @@ void OperatorExamples()
     Console.WriteLine(area);
 
 
-    int myfavoritenumber = 7;
-    int MyFavoriteNumber = 10;
-    int my_favorite_number = 14;
+    while (area < 20)
+    {
+        height++;
+        area = width * height;
+    }
+    do
+    {
+        width--;
+        area = width * height;
+    } while (area > 25);
 
+    // The next two staatements declare string variables
+    // and use the + operator to concatenate (join) them
+    string result = "The area";
+    result += " is " + area;
+    Console.WriteLine(result);
+
+    // A Boolean variable is either true or false
+    bool truthValue = true;
+    Console.WriteLine(truthValue);
 }
